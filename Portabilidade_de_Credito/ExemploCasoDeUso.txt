@@ -1,0 +1,79 @@
+DOIS EXEMPLOS DE CASO DE USO
+
+Título: Solicitar Portabilidade de Crédito
+
+Ator: Cliente
+
+Descrição: O Cliente acessa o sistema da Instituição e solicita a portabilidade de seu crédito pessoal, preenchendo os dados necessários. 
+O sistema valida os dados e retorna uma confirmação.
+
+Fluxo principal:
+1. Cliente acessa o sistema.
+2. Cliente preenche os dados para portabilidade.
+3. O sistema valida os dados.
+4. O sistema confirma a solicitação.
+
+Fluxos alternativos: Dados inválidos ou ausentes.
+
+#################################
+
+**Caso de Uso** para o cenário de **portabilidade de crédito** entre duas instituições financeiras no contexto do **Open Finance Brasil**:
+---
+### Caso de Uso: Portabilidade de Crédito entre Instituições no Open Finance Brasil
+**Título**: Solicitação de Portabilidade de Crédito
+- **Ator Principal**: Cliente
+- **Atores Secundários**: Instituição Credora, Instituição Proponente
+---
+#### **Descrição**:
+O Cliente possui um contrato de crédito na Instituição Credora e deseja fazer a portabilidade de crédito para a Instituição Proponente,
+buscando melhores condições de pagamento. Para viabilizar essa transferência,
+a Instituição Proponente precisa do consentimento do Cliente para acessar os dados financeiros mantidos na Instituição Credora.
+O processo deve ser seguro, rápido e transparente, em conformidade com as regras do Open Finance Brasil.
+---
+#### **Pré-condições**:
+1. O Cliente já tem um contrato de crédito vigente na Instituição Credora.
+2. A Instituição Proponente deve oferecer a opção de portabilidade de crédito.
+3. O Cliente deve estar cadastrado no sistema de Open Finance Brasil.
+---
+#### **Fluxo Principal**:
+1. **Cliente** acessa a plataforma da **Instituição Proponente** e solicita a portabilidade de crédito.
+2. **Instituição Proponente** informa ao **Cliente** que precisará acessar seus dados financeiros na **Instituição Credora**.
+3. **Instituição Proponente** solicita o consentimento do **Cliente** para acessar seus dados através da integração do Open Finance.
+4. **Cliente** revisa a solicitação e concede o consentimento.
+5. **Instituição Proponente** envia uma requisição para a **Instituição Credora**, acessando os dados financeiros do **Cliente**,
+como saldo devedor, taxa de juros, CET (Custo Efetivo Total), e informações contratuais.
+6. **Instituição Proponente** realiza a análise dos dados obtidos e apresenta uma proposta de portabilidade ao **Cliente**.
+7. **Cliente** revisa a proposta de portabilidade e a aceita.
+8. **Instituição Proponente** inicia o processo de portabilidade junto à **Instituição Credora**,
+transferindo o saldo devedor e formalizando o novo contrato de crédito.
+9. O processo é finalizado com a confirmação de portabilidade e um novo contrato é gerado na **Instituição Proponente**.
+---
+#### **Fluxo Alternativo 1**: Cliente Recusa o Consentimento
+1. O **Cliente** acessa a plataforma da **Instituição Proponente** e solicita a portabilidade de crédito.
+2. **Instituição Proponente** informa que precisa acessar os dados da **Instituição Credora**.
+3. **Cliente** decide **não conceder o consentimento**.
+4. **Instituição Proponente** informa que a portabilidade não pode ser processada sem o consentimento e o processo é interrompido.
+---
+#### **Fluxo Alternativo 2**: Dados Insuficientes para Portabilidade
+1. O **Cliente** concede o consentimento para acessar os dados da **Instituição Credora**.
+2. **Instituição Proponente** solicita os dados da **Instituição Credora** via Open Finance.
+3. A **Instituição Credora** responde com dados insuficientes para análise (ex.: ausência de informações sobre taxas ou saldo devedor).
+4. **Instituição Proponente** solicita mais informações à **Instituição Credora**.
+5. Se os dados não forem providenciados, o **Cliente** é notificado e o processo é suspenso até que as informações necessárias sejam obtidas.
+---
+#### **Fluxo Alternativo 3**: Cliente Rejeita a Proposta de Portabilidade
+1. O **Cliente** revisa os dados e a proposta da **Instituição Proponente**.
+2. **Cliente** decide não aceitar a proposta de portabilidade.
+3. **Instituição Proponente** cancela o processo de portabilidade, e o **Cliente** mantém o contrato na **Instituição Credora**.
+---
+#### **Pós-condições**:
+1. Se o fluxo for bem-sucedido, o **Cliente** terá seu crédito transferido para a **Instituição Proponente** com as novas condições acordadas.
+2. Caso o consentimento não seja concedido ou os dados sejam insuficientes, o processo é interrompido.
+---
+#### **Regras de Negócio**:
+1. O consentimento do **Cliente** é obrigatório para acessar os dados na **Instituição Credora**.
+2. A **Instituição Credora** deve fornecer todos os dados necessários para a análise da portabilidade, conforme regulamentação do Open Finance Brasil.
+3. O processo de portabilidade deve estar em conformidade com as regulamentações de proteção de dados (LGPD).
+---
+Esse Caso de Uso captura a interação do **Cliente** e das instituições envolvidas no processo de portabilidade de crédito,
+destacando a necessidade de consentimento do **Cliente** para acessar seus dados financeiros por meio do **Open Finance Brasil**.
