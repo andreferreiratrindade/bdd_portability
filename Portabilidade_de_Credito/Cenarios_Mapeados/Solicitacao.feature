@@ -28,7 +28,7 @@ Scenario: IF proponente avalia dados do cliente
   Given que a Instituição Proponente está avaliando a viabilidade da portabilidade para o Cliente
   And a Instituição Proponente consulta as APIs de Dados Transacionais
   When a consulta é realizada com sucessso
-  Then a API deve retornar se os dados trafegados são suficientes para a solicitação de portabilidade 
+  Then a API deve retornar se os dados trafegados são suficientes para a solicitação de portabilidade
   And identifica a necessidade de ajustes
   And a API deve verificar se o Cliente já forneceu o consentimento necessário e, caso não tenha fornecido, solicitar através do fluxo de compartilhamento de dados transacionais
 
@@ -37,13 +37,14 @@ Scenario: Instituição proponente não pode consultar dados do cliente sem o co
   When a Instituição Proponente acessa as APIs de Dados Transacionais sem o consentimento prévio do Cliente
   Then a API deve bloquear o acesso e solicitar o consentimento do Cliente antes de prosseguir com a solicitação de portabilidade
 
+!!! Ponto para verificar
 Scenario: IF proponente consulta se a solicitação precisa de ajustes
   Given que a Instituição Proponente está utilizando as APIs de Dados Transacionais
   And consulta os dados da solicitação
   When a Instituição Proponente avança com a solicitação de portabilidade
   Then a API deve identificar qualquer ajuste necessário
   And informar os ajustes necessários
-
+!!! Ponto para verificar
 
         Scenario: Viabilizar um processo de consentimento duplo
             Given que o processo de portabilidade está em andamento
